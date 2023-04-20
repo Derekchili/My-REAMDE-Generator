@@ -16,14 +16,14 @@ https://drive.google.com/file/d/1ur-_mOnFAS5A75k92Jl9565LvR1xEQ6J/view
 Here is my github link: 
 https://github.com/Derekchili/My-REAMDE-Generator.git
 
+## Usage
+When you open the index.js file then right click on index.js and go to open in integrated terminal. Then in the terminal you will type in the following command: node index.js. It will then start asking you a series of questions, once done will produce a README.md inside the README folder.
+
 ## Screenshot
 ![alt text](./assets/screenshot.png)
 ![alt text](./assets/screenshot2.png)
 ![alt text](./assets/screenshot3.png)
 
-
-## Usage
-When you open the index.js file then right click on index.js and go to open in integrated terminal. Then in the terminal you will type in the following command: node index.js. It will then start asking you a series of questions, once done will produce a README.md inside the README folder.
 
 ## Credits
 Alex Horning from class told me not to overthink this and helped a little to get it started. And then Tutor Andres helped get the badge to work I was really close.
