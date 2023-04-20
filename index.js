@@ -1,8 +1,8 @@
 
-// TODO: Include packages needed for this application
+// Added packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer')
-// TODO: Create an array of questions for user input
+// Created an array of questions for user input
 inquirer.prompt([
     {
         type: 'input',
@@ -58,6 +58,11 @@ inquirer.prompt([
     }, 
     {
         type: 'input',
+        message: 'If you created an application or package and would like other developers to contribute it please do it here.',
+        name: 'Contributing'
+    },
+    {
+        type: 'input',
         message: 'Whats your GitHub username?',
         name: 'Github'
     },
@@ -69,7 +74,8 @@ inquirer.prompt([
     
 ]).then(answers => {
     let readme = `
-<${answers.Title}>
+# ${answers.Title}
+![${answers.Badge}](https://img.shields.io/static/v1?label=${answers.Badge}&message=License)
 
 ## Description
 ${answers.Description}
@@ -84,6 +90,7 @@ ${answers.Table}
 ## Installation
 ${answers.Installation}
 
+## Screenshot
 ![${answers.alt}](../assets/${answers.Picture})
 
 ## Usage
@@ -93,19 +100,18 @@ ${answers.Usage}
 ${answers.Credits}
 
 ## License
-[https://choosealicense.com/](https://choosealicense.com/).
 ${answers.License}
 
 ## Badges
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-${answers.Badge}
+![${answers.Badge}](https://img.shields.io/static/v1?label=${answers.Badge}&message=License)
+
 
 ## Contributing
 ${answers.Contributing}
 
 ##  Questions
-[https://github.com/${answers.Github}]
-[${answers.Email}]
+If you have any questions you can reach me at: [https://github.com/${answers.Github}][(${answers.Email})]
+
 `
 fs.writeFile('./README/README.md',readme,(err)=>{
     if(err){
@@ -115,6 +121,3 @@ fs.writeFile('./README/README.md',readme,(err)=>{
 })
 });
 
-
-// license style: ?style=flat&logo=appveyor 
-// badges : https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR> color brightgreen
